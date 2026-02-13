@@ -37,6 +37,12 @@ cr. [Wheeled Mobile Robot Kinematics](https://control.ros.org/iron/doc/ros2_cont
 ### Sequence 02 – Non-Empty Hallway with Non-Aggressive Motion <br>
 <img width="1121" height="847" alt="RAW03" src="https://github.com/user-attachments/assets/a9a86853-0db4-45e2-9363-6d3dfaac9570" /> <br>
 ## EKF Odometry <br>
+<img width="811" height="445" alt="figure-extended-kalman-filter-algorithm" src="https://github.com/user-attachments/assets/0ce2ce0e-2950-4d91-be41-92a0cd2c110b" /><br>
+cr. [Wireless Pi](https://wirelesspi.com/the-extended-kalman-filter-ekf/)<br><br>
+<img width="102" height="135" alt="imu_ekf" src="https://github.com/user-attachments/assets/9756af09-f096-4cd0-8e0b-a7954d361ca2" /><br>
+
+
+
 ### Sequence 00 - empty hallway<br>
 <img width="1668" height="909" alt="EKF00" src="https://github.com/user-attachments/assets/a643ec48-f962-4571-9a3f-4d44f058bcdc" /><br>
 ### Sequence 01 – Non-Empty Hallway with Sharp Turns<br>
