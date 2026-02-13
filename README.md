@@ -69,8 +69,13 @@ t<sub>0</sub>=Translation matrix from EKF<br><br>
 **Nearest Neighbor Association**<br>
 <img width="257" height="53" alt="image" src="https://github.com/user-attachments/assets/4e484252-0b27-4181-a7c5-5f958a1602f2" /><br>
 x<sub>(i)</sub><sup>(k)</sup> = Each index of current point for each iteration<br>
-y<sub>j</sub> = Each index of previous point<br>
-<img width="133" height="121" alt="image" src="https://github.com/user-attachments/assets/7e440a09-1ef2-44a3-b3ce-83785e3940d3" /><br>
+y<sub>j</sub> = Each index of previous point<br><br>
+<img width="133" height="121" alt="image" src="https://github.com/user-attachments/assets/7e440a09-1ef2-44a3-b3ce-83785e3940d3" /><br><br>
+**Compute centroid**<br>
+<img width="287" height="79" alt="image" src="https://github.com/user-attachments/assets/94317786-c74f-415a-8243-fb65da97f5dc" /><br>
+**Cross covariance matrix**<br>
+<img width="251" height="67" alt="image" src="https://github.com/user-attachments/assets/f8da745b-68c2-4683-80d6-c0d7d39b0336" /><br>
+
 
 ### Sequence 00 - empty hallway<br>
 <img width="2063" height="1060" alt="ICP00" src="https://github.com/user-attachments/assets/c18effbd-a9e9-4584-bbe6-a05647c0b575" /><br>
