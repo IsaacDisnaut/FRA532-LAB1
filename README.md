@@ -59,12 +59,19 @@ cr. [Wireless Pi](https://wirelesspi.com/the-extended-kalman-filter-ekf/)<br><br
 ### Sequence 02 – Non-Empty Hallway with Non-Aggressive Motion<br>
 <img width="1218" height="896" alt="EKF02" src="https://github.com/user-attachments/assets/f456a3bb-397a-48df-8bee-37fe1988c97a" /><br><br>
 ## ICP Odometry<br>
+
 **Initial guess**<br>
 <img width="157" height="55" alt="Initial_guess_icp" src="https://github.com/user-attachments/assets/457a7f69-ca15-4c80-8362-8e7c7ff594da" /><br>
 X<sup>(0)</sup> = Initial position<br>
 R<sub>0</sub> = Rotation matrix from EKF<br>
 X = Current set of scan point<br>
-t<sub>0</sub>=Translation matrix from EKF<br>
+t<sub>0</sub>=Translation matrix from EKF<br><br>
+**Nearest Neighbor Association**<br>
+<img width="257" height="53" alt="image" src="https://github.com/user-attachments/assets/4e484252-0b27-4181-a7c5-5f958a1602f2" /><br>
+x<sub>(i)</sub><sup>(k)</sup> = Each index of current point for each iteration<br>
+y<sub>j</sub> = Each index of previous point<br>
+<img width="133" height="121" alt="image" src="https://github.com/user-attachments/assets/7e440a09-1ef2-44a3-b3ce-83785e3940d3" /><br>
+
 ### Sequence 00 - empty hallway<br>
 <img width="2063" height="1060" alt="ICP00" src="https://github.com/user-attachments/assets/c18effbd-a9e9-4584-bbe6-a05647c0b575" /><br>
 ### Sequence 01 – Non-Empty Hallway with Sharp Turns<br>
