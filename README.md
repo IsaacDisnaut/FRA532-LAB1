@@ -1,4 +1,4 @@
-# Part1:EKF Odometry Fusion
+<img width="179" height="67" alt="image" src="https://github.com/user-attachments/assets/0a5f7307-1975-4f9f-b850-883be0480e4b" /># Part1:EKF Odometry Fusion
 
 ## Objective
 
@@ -81,6 +81,10 @@ in python we can use U, _, V = np.linalg.svd(H) to define U and V<br>
 <img width="112" height="55" alt="image" src="https://github.com/user-attachments/assets/6f33d409-a9ef-4f09-aeb4-c78260e17c4f" /><br>
 **Optimal translation**<br>
 <img width="108" height="47" alt="image" src="https://github.com/user-attachments/assets/dbc9d43b-034c-41c3-b5e0-e2cc593ad781" /><br>
+**Point Update**<br>
+<img width="177" height="40" alt="image" src="https://github.com/user-attachments/assets/119d3997-801a-447c-9121-6064685939b7" /><br>
+**Accumulate trnsform**<br>
+<img width="179" height="67" alt="image" src="https://github.com/user-attachments/assets/2e672ed2-accb-48cc-b15a-29620e0ca103" /><br>
 
 
 ### Sequence 00 - empty hallway<br>
