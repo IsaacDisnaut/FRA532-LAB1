@@ -35,9 +35,9 @@ In this part, you will run slam_toolbox using LiDAR data and an odometry source 
 ### Sequence 00 - empty hallway<br>
 <img width="1668" height="909" alt="EKF00" src="https://github.com/user-attachments/assets/a643ec48-f962-4571-9a3f-4d44f058bcdc" /><br>
 ### Sequence 01 – Non-Empty Hallway with Sharp Turns<br>
-<img width="1218" height="896" alt="EK" src="https://github.com/user-attachments/assets/e22765bb-f51b-407f-b1a8-11537ffe1e98" />
+<img width="1218" height="896" alt="EK" src="https://github.com/user-attachments/assets/e22765bb-f51b-407f-b1a8-11537ffe1e98" /><br>
 ### Sequence 02 – Non-Empty Hallway with Non-Aggressive Motion<br>
-<img width="1218" height="896" alt="EKF02" src="https://github.com/user-attachments/assets/f456a3bb-397a-48df-8bee-37fe1988c97a" />
+<img width="1218" height="896" alt="EKF02" src="https://github.com/user-attachments/assets/f456a3bb-397a-48df-8bee-37fe1988c97a" /><br>
 ## ICP Odometry<br>
 ### Sequence 00 - empty hallway<br>
 ### Sequence 01 – Non-Empty Hallway with Sharp Turns<br>
