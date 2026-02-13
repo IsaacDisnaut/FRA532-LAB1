@@ -7,3 +7,4 @@ The objective of this part is to implement an Extended Kalman Filter (EKF) to fu
 Description
 
 In this part, you will compute wheel odometry from /joint_states and fuse it with IMU measurements from /imu using an EKF. The EKF estimates the robot pose by combining a differential-drive motion model with probabilistic sensor updates.
+![Uploading image.png…]()
