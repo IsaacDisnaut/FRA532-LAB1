@@ -87,7 +87,7 @@ in python we can use U, _, V = np.linalg.svd(H) to define U and V<br>
 <img width="179" height="67" alt="image" src="https://github.com/user-attachments/assets/2e672ed2-accb-48cc-b15a-29620e0ca103" /><br>
 **Error between corresponse point**<br>
 <img width="316" height="76" alt="image" src="https://github.com/user-attachments/assets/19392e51-304b-4035-91ee-625b7495380c" /><br>
-
+break the loop when k>=max iteration or error < tol
 
 ### Sequence 00 - empty hallway<br>
 <img width="2063" height="1060" alt="ICP00" src="https://github.com/user-attachments/assets/c18effbd-a9e9-4584-bbe6-a05647c0b575" /><br>
