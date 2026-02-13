@@ -57,8 +57,11 @@ cr. [Wireless Pi](https://wirelesspi.com/the-extended-kalman-filter-ekf/)<br><br
 ### Sequence 01 – Non-Empty Hallway with Sharp Turns<br>
 <img width="1218" height="896" alt="EK" src="https://github.com/user-attachments/assets/e22765bb-f51b-407f-b1a8-11537ffe1e98" /><br>
 ### Sequence 02 – Non-Empty Hallway with Non-Aggressive Motion<br>
-<img width="1218" height="896" alt="EKF02" src="https://github.com/user-attachments/assets/f456a3bb-397a-48df-8bee-37fe1988c97a" /><br>
+<img width="1218" height="896" alt="EKF02" src="https://github.com/user-attachments/assets/f456a3bb-397a-48df-8bee-37fe1988c97a" /><br><br>
 ## ICP Odometry<br>
+**Initial guess**<br>
+<img width="157" height="55" alt="Initial_guess_icp" src="https://github.com/user-attachments/assets/457a7f69-ca15-4c80-8362-8e7c7ff594da" /><br>
+
 ### Sequence 00 - empty hallway<br>
 <img width="2063" height="1060" alt="ICP00" src="https://github.com/user-attachments/assets/c18effbd-a9e9-4584-bbe6-a05647c0b575" /><br>
 ### Sequence 01 – Non-Empty Hallway with Sharp Turns<br>
