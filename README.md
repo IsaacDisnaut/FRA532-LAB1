@@ -61,7 +61,10 @@ cr. [Wireless Pi](https://wirelesspi.com/the-extended-kalman-filter-ekf/)<br><br
 ## ICP Odometry<br>
 **Initial guess**<br>
 <img width="157" height="55" alt="Initial_guess_icp" src="https://github.com/user-attachments/assets/457a7f69-ca15-4c80-8362-8e7c7ff594da" /><br>
-
+X<sup>(0)</sup> = Initial position<br>
+R<sub>0</sub> = Rotation matrix from EKF<br>
+X = Current set of scan point<br>
+t<sub>0</sub>=Translation matrix from EKF<br>
 ### Sequence 00 - empty hallway<br>
 <img width="2063" height="1060" alt="ICP00" src="https://github.com/user-attachments/assets/c18effbd-a9e9-4584-bbe6-a05647c0b575" /><br>
 ### Sequence 01 – Non-Empty Hallway with Sharp Turns<br>
