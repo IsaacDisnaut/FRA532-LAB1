@@ -74,8 +74,11 @@ y<sub>j</sub> = Each index of previous point<br><br>
 **Compute centroid**<br>
 <img width="287" height="79" alt="image" src="https://github.com/user-attachments/assets/94317786-c74f-415a-8243-fb65da97f5dc" /><br>
 **Cross covariance matrix**<br>
-<img width="251" height="67" alt="image" src="https://github.com/user-attachments/assets/f8da745b-68c2-4683-80d6-c0d7d39b0336" /><br>
-
+<img width="245" height="66" alt="image" src="https://github.com/user-attachments/assets/72c24060-968e-4439-b791-95ac0177460b" /><br>
+**SVD**<br>
+H =VΣU<sup>T</sup><br>
+U, _, V = np.linalg.svd(H)<br>
+R=VU<sup>T</sup><br>
 
 ### Sequence 00 - empty hallway<br>
 <img width="2063" height="1060" alt="ICP00" src="https://github.com/user-attachments/assets/c18effbd-a9e9-4584-bbe6-a05647c0b575" /><br>
