@@ -27,7 +27,7 @@ In this part, you will run slam_toolbox using LiDAR data and an odometry source 
 ## Wheel Odometry<br>
 <img width="575" height="301" alt="Pasted image" src="https://github.com/user-attachments/assets/010f78ce-dd9e-4e90-8476-c6645b207dbc" /><br>
 <img width="242" height="131" alt="Pasted image (2)" src="https://github.com/user-attachments/assets/16fa28bd-029a-436d-aa87-54090e6dc90b" /><br>
-cr. [Wheeled Mobile Robot Kinematics](https://control.ros.org/iron/doc/ros2_controllers/doc/mobile_robot_kinematics.html)<br>
+cr. [Wheeled Mobile Robot Kinematics](https://control.ros.org/iron/doc/ros2_controllers/doc/mobile_robot_kinematics.html)<br><br>
 **x += V<sub>b,x</sub>cos(θ)Δt**<br>
 **y += V<sub>b,x</sub>sin(θ)Δt**<br>
 ### Sequence 00 - empty hallway<br>
