@@ -86,7 +86,7 @@ in python we can use U, _, V = np.linalg.svd(H) to define U and V<br>
 **Accumulate trnsform**<br>
 <img width="179" height="67" alt="image" src="https://github.com/user-attachments/assets/2e672ed2-accb-48cc-b15a-29620e0ca103" /><br>
 **Error between corresponse point**<br>
-<img width="301" height="67" alt="image" src="https://github.com/user-attachments/assets/53328a76-8484-476d-a9a3-9f06715415ea" /><br>
+<img width="316" height="76" alt="image" src="https://github.com/user-attachments/assets/19392e51-304b-4035-91ee-625b7495380c" /><br>
 
 
 ### Sequence 00 - empty hallway<br>
