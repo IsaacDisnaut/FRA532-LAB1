@@ -76,9 +76,12 @@ y<sub>j</sub> = Each index of previous point<br><br>
 **Cross covariance matrix**<br>
 <img width="245" height="66" alt="image" src="https://github.com/user-attachments/assets/72c24060-968e-4439-b791-95ac0177460b" /><br>
 **SVD**<br>
-H =VΣU<sup>T</sup><br>
-U, _, V = np.linalg.svd(H)<br>
-R=VU<sup>T</sup><br>
+<img width="112" height="55" alt="image" src="https://github.com/user-attachments/assets/acf3dfcc-6908-446f-b8f4-3344b55a67a0" /><br>
+in python we can use U, _, V = np.linalg.svd(H) to define U and V<br>
+<img width="112" height="55" alt="image" src="https://github.com/user-attachments/assets/6f33d409-a9ef-4f09-aeb4-c78260e17c4f" /><br>
+**Optimal translation**<br>
+<img width="108" height="47" alt="image" src="https://github.com/user-attachments/assets/dbc9d43b-034c-41c3-b5e0-e2cc593ad781" /><br>
+
 
 ### Sequence 00 - empty hallway<br>
 <img width="2063" height="1060" alt="ICP00" src="https://github.com/user-attachments/assets/c18effbd-a9e9-4584-bbe6-a05647c0b575" /><br>
