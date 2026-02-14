@@ -162,7 +162,7 @@ Robustness:Accuracy standard deviation = 0.00945 Max accuracy error = 0.1399<br>
 Average accuracy MSE of matching scan point = 0.00513<br>Average drift error compare with EKF = 7.741m<br>
 Robustness:Accuracy standard deviation = 0.00825 Max accuracy error = 0.0979<br><br>
 
-MSE of matching scan point approaching to 0. this suggest that ICP algorithm is align to scan data precisely.Robustness is quiet high due to low variance of error but there's very high drift error due to there's no correction for position drift <br><br>
+MSE of matching scan point approaching to 0. this suggest that ICP algorithm is align to scan data precisely.Robustness is quiet high due to low variance of error except sequence 00 that very high accuracy error. there's very high drif due to there's no correction for position drift <br><br>
 ### Slam toolbox <br>
 **Sequence 00 - empty hallway**<br>
 **Sequence 01 – Non-Empty Hallway with Sharp Turns**<br>
