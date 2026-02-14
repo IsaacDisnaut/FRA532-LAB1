@@ -119,16 +119,20 @@ ros2 launch lab1 slam.launch.py seq:=[number of sequence]
 ### Wheel Odometry<br>
 **Sequence 00 - empty hallway**<br>
 Average accuracy between Yaw and encoder = 1.0562 rad<br>
-Average drift = 0.0396 m<br>
-Robustness: standard deviation of velocity = 0.0006<br>
+Average drift = 0.0396 m  drift rate = 1.0086 m/m<br> 
+Robustness: standard deviation of velocity = 0.0006<br><br>
+
 **Sequence 01 – Non-Empty Hallway with Sharp Turns**<br>
 Average accuracy between Yaw and encoder = 1.3038 rad<br>
-Average drift = 0.0421 m<br>
+Average drift = 0.0421 m drift rate = 0.9881 m/m<br>
 Robustness: standard deviation of velocity = 0.0017<br>
+
 **Sequence 02 – Non-Empty Hallway with Non-Aggressive Motion**<br>
 Average accuracy between Yaw and encoder = 1.2087 rad<br>
-Average drift = 0.0432 m<br>
-Robustness: standard deviation of velocity = 0.0006<br>
+Average drift = 0.0432 m drift rate = 0.9556 m/m<br>
+Robustness: standard deviation of velocity = 0.0006<br><br>
+
+There's conflict between IMU and encoder such as lpped wheel or drifted imu if we look at drifted rate we will see that system has very high drift rate so it's quiet low accuracy.inpart of robustness it's very stable and low variance.<br>
 ### EKF odometry<br>
 **Sequence 00 - empty hallway**<br>
 Average P trace = 6.8178 <br>
