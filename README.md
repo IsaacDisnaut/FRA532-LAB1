@@ -118,8 +118,17 @@ ros2 launch lab1 slam.launch.py seq:=[number of sequence]
 ## Discussion
 ### Wheel Odometry<br>
 **Sequence 00 - empty hallway**<br>
+Average accuracy between Yaw and encoder = 1.0562 rad<br>
+Average drift = 0.0396 m<br>
+Robustness: standard deviation of velocity = 0.0006<br>
 **Sequence 01 – Non-Empty Hallway with Sharp Turns**<br>
+Average accuracy between Yaw and encoder = 1.3038 rad<br>
+Average drift = 0.0421 m<br>
+Robustness: standard deviation of velocity = 0.0017<br>
 **Sequence 02 – Non-Empty Hallway with Non-Aggressive Motion**<br>
+Average accuracy between Yaw and encoder = 1.2087 rad<br>
+Average drift = 0.0432 m<br>
+Robustness: standard deviation of velocity = 0.0006<br>
 ### EKF odometry<br>
 **Sequence 00 - empty hallway**<br>
 Average P trace = 6.8178 <br>
