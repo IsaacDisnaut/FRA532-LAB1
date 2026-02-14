@@ -126,6 +126,8 @@ ros2 launch lab1 slam.launch.py seq:=[number of sequence]
 **Sequence 02 – Non-Empty Hallway with Non-Aggressive Motion**<br>
 ### ICP odometry<br>
 **Sequence 00 - empty hallway**<br>
+Average accuracy MSE of matching scan point = 0.00937  Average drift error compare with EKF = 5.277m<br>
+Robustness:Accuracy standard deviation = 0.0236 Max accuracy error = 0.8124<br>
 **Sequence 01 – Non-Empty Hallway with Sharp Turns**<br>
 **Sequence 02 – Non-Empty Hallway with Non-Aggressive Motion**<br>
 ### Slam toolbox <br>
