@@ -132,7 +132,7 @@ Average accuracy between Yaw and encoder = 1.2087 rad<br>
 Average drift = 0.0432 m drift rate = 0.9556 m/m<br>
 Robustness: standard deviation of velocity = 0.0006<br><br>
 
-There's conflict between IMU and encoder such as lpped wheel or drifted imu if we look at drifted rate we will see that system has very high drift rate so it's quiet low accuracy.inpart of robustness it's very stable and low variance.<br>
+There's conflict between IMU and encoder such as lpped wheel or drifted imu if we look at drifted rate we will see that system has very high drift rate so it's quiet low accuracy.inpart of robustness it's very stable and low variance.<br><br>
 ### EKF odometry<br>
 **Sequence 00 - empty hallway**<br>
 Average P trace = 6.8178 <br>
@@ -148,7 +148,9 @@ IMU average = 0.0257  Encoder average = 0.0037<br>
 Average P trace = 2.846*10<sup>17</sup><br>
 Average drift error compare with raw odometry = 0.4384 m<br>
 Robustness Compare between predict and measurement<br>
-IMU average = 0.0122  Encoder average = 0.0022<br>
+IMU average = 0.0122  Encoder average = 0.0022<br><br>
+
+in sequence 00 there's accumulation of uncertaintly overtime because there's not external position corrections but in sequence 01 and 02 P trace overwhelmly high eventhough  Average dift error and average sensor error still low that mean sensor fusion still maintaining positioning performance compare with standalone odometry<br><br>
 ### ICP odometry<br>
 **Sequence 00 - empty hallway**<br>
 Average accuracy MSE of matching scan point = 0.00937<br>Average drift error compare with EKF = 5.277m<br>
