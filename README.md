@@ -115,5 +115,20 @@ ros2 launch lab1 slam.launch.py seq:=[number of sequence]
 ### Sequence 01 – Non-Empty Hallway with Sharp Turns<br>
 ### Sequence 02 – Non-Empty Hallway with Non-Aggressive Motion<br>
 
-
-
+## Discussion
+### Wheel Odometry<br>
+**Sequence 00 - empty hallway**<br>
+**Sequence 01 – Non-Empty Hallway with Sharp Turns**<br>
+**Sequence 02 – Non-Empty Hallway with Non-Aggressive Motion**<br>
+### EKF odometry<br>
+**Sequence 00 - empty hallway**<br>
+**Sequence 01 – Non-Empty Hallway with Sharp Turns**<br>
+**Sequence 02 – Non-Empty Hallway with Non-Aggressive Motion**<br>
+### ICP odometry<br>
+**Sequence 00 - empty hallway**<br>
+**Sequence 01 – Non-Empty Hallway with Sharp Turns**<br>
+**Sequence 02 – Non-Empty Hallway with Non-Aggressive Motion**<br>
+### Slam toolbox <br>
+**Sequence 00 - empty hallway**<br>
+**Sequence 01 – Non-Empty Hallway with Sharp Turns**<br>
+**Sequence 02 – Non-Empty Hallway with Non-Aggressive Motion**<br>
