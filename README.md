@@ -96,6 +96,7 @@ break the loop when k>=max iteration or error < tol
 ### Sequence 02 – Non-Empty Hallway with Non-Aggressive Motion<br>
 <img width="1218" height="896" alt="ICP03" src="https://github.com/user-attachments/assets/364e2ef5-8e1e-4a2f-8f8d-b0d47a0a3fc3" /><br>
 ## Slam toolbox Odometry<br>
+[SLAM_toolbox source code](https://github.com/phattanaratjeedjeen-sudo/FRA532-LAB-6810/tree/lab1/src/lab1)<br>
 ### Sequence 00 - empty hallway<br>
 ### Sequence 01 – Non-Empty Hallway with Sharp Turns<br>
 ### Sequence 02 – Non-Empty Hallway with Non-Aggressive Motion<br>
