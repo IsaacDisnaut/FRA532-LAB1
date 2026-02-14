@@ -52,6 +52,7 @@ cr. [Wireless Pi](https://wirelesspi.com/the-extended-kalman-filter-ekf/)<br><br
 <img width="213" height="47" alt="encoder_ekf2" src="https://github.com/user-attachments/assets/37bc2ffd-8a19-4582-b692-4c689864b7db" /><br><br>
 **Prediction model**<br>
 <img width="177" height="96" alt="Prediction_step" src="https://github.com/user-attachments/assets/8a01aef5-4913-4b6f-bbcd-7700fd81aa06" /><br>
+<img width="1265" height="352" alt="image" src="https://github.com/user-attachments/assets/68080279-6089-480a-b332-fa9a5b6e8377" /><br><br>
 
 ### Sequence 00 - empty hallway<br>
 <img width="1668" height="909" alt="EKF00" src="https://github.com/user-attachments/assets/a643ec48-f962-4571-9a3f-4d44f058bcdc" /><br>
