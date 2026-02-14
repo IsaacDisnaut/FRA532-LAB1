@@ -99,8 +99,6 @@ break the loop when k>=max iteration or error < tol
 ### Map from ICP<br>
 ** Sequence 00 **<br>
 <img width="1140" height="826" alt="ICPmap00" src="https://github.com/user-attachments/assets/2b5c43a4-598f-42ab-abae-71793089cb9a" /><br>
-
-
 ** Sequence 01 **<br>
 <img width="1140" height="826" alt="ICP_MAP01" src="https://github.com/user-attachments/assets/6905816c-0550-468e-8bfe-dbbff0b10f61" /><br>
 
@@ -109,6 +107,10 @@ break the loop when k>=max iteration or error < tol
 
 ## Slam toolbox Odometry<br>
 [SLAM_toolbox source code](https://github.com/phattanaratjeedjeen-sudo/FRA532-LAB-6810/tree/lab1/src/lab1)<br>
+```
+ros2 launch lab1 slam.launch.py seq:=[number of sequence]
+```
+
 ### Sequence 00 - empty hallway<br>
 ### Sequence 01 – Non-Empty Hallway with Sharp Turns<br>
 ### Sequence 02 – Non-Empty Hallway with Non-Aggressive Motion<br>
