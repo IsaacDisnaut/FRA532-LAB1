@@ -1,4 +1,4 @@
-<img width="179" height="67" alt="image" src="https://github.com/user-attachments/assets/0a5f7307-1975-4f9f-b850-883be0480e4b" /># Part1:EKF Odometry Fusion
+# Part1:EKF Odometry Fusion
 
 ## Objective
 
