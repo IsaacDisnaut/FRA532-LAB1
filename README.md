@@ -1,6 +1,6 @@
 # Part1:EKF Odometry Fusion<br>
 
-##68340700403<br>
+## 68340700403<br>
 ## Objective<br>
 
 The objective of this part is to implement an Extended Kalman Filter (EKF) to fuse wheel odometry and IMU measurements in order to obtain a filtered and more reliable odometry estimate compared to raw wheel odometry.
@@ -96,6 +96,17 @@ break the loop when k>=max iteration or error < tol
 <img width="1218" height="896" alt="ICP01" src="https://github.com/user-attachments/assets/82239433-c995-4ccb-88d4-7c585994f48f" /><br>
 ### Sequence 02 – Non-Empty Hallway with Non-Aggressive Motion<br>
 <img width="1218" height="896" alt="ICP03" src="https://github.com/user-attachments/assets/364e2ef5-8e1e-4a2f-8f8d-b0d47a0a3fc3" /><br>
+### Map from ICP<br>
+** Sequence 00 **<br>
+<img width="1140" height="826" alt="ICPmap00" src="https://github.com/user-attachments/assets/2b5c43a4-598f-42ab-abae-71793089cb9a" /><br>
+
+
+** Sequence 01 **<br>
+<img width="1140" height="826" alt="ICP_MAP01" src="https://github.com/user-attachments/assets/6905816c-0550-468e-8bfe-dbbff0b10f61" /><br>
+
+** Sequence 02 **<br>
+<img width="1140" height="826" alt="ICP_MAP03" src="https://github.com/user-attachments/assets/1aeeec67-548b-4daf-b830-69798441faa0" /><br>
+
 ## Slam toolbox Odometry<br>
 [SLAM_toolbox source code](https://github.com/phattanaratjeedjeen-sudo/FRA532-LAB-6810/tree/lab1/src/lab1)<br>
 ### Sequence 00 - empty hallway<br>
