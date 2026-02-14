@@ -30,7 +30,9 @@ In this part, you will run slam_toolbox using LiDAR data and an odometry source 
 <img width="242" height="131" alt="Pasted image (2)" src="https://github.com/user-attachments/assets/16fa28bd-029a-436d-aa87-54090e6dc90b" /><br>
 cr. [Wheeled Mobile Robot Kinematics](https://control.ros.org/iron/doc/ros2_controllers/doc/mobile_robot_kinematics.html)<br><br>
 **x += V<sub>b,x</sub>cos(θ)Δt**<br>
-**y += V<sub>b,x</sub>sin(θ)Δt**<br>
+**y += V<sub>b,x</sub>sin(θ)Δt**<br><img width="1524" height="356" alt="image" src="https://github.com/user-attachments/assets/85abdbec-5e7a-4af5-b4f8-5fb9fda4d8d3" /><br><br>
+
+
 ### Sequence 00 - empty hallway<br>
 <img width="1668" height="909" alt="RAW00" src="https://github.com/user-attachments/assets/c0f3cef0-20cc-47d0-8994-49bc531f7a72" /> <br>
 ### Sequence 01 - Non-Empty Hallway with Sharp Turns <br>
