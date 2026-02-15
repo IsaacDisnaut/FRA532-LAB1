@@ -200,5 +200,8 @@ Average drit error = 0.61246 m<br>
 Average robustness velocity = 0.00204 m/s <br><br>
 
 **Sequence 02 – Non-Empty Hallway with Non-Aggressive Motion**<br>
+Average accuracy proxy = 0.00194<br> 
+Average drit error = 0.58236 m<br>
+Average robustness velocity = 0.00083 m/s <br><br>
 
 SLAM from slam toolbox can maintain high accuracy and low average drift. proving its robustness in maintaining spatial consistency.<br>
