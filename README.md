@@ -128,23 +128,33 @@ ros2 launch lab1 slam.launch.py seq:=[number of sequence]
 
 ## Discussion
 ### Wheel Odometry<br>
+<img width="401" height="63" alt="image" src="https://github.com/user-attachments/assets/b0a16b02-90b9-42f5-867e-921a4f34ce7e" /><br>
+<img width="401" height="63" alt="image" src="https://github.com/user-attachments/assets/2f7efa30-04dd-4dc0-9e12-2a430372b0d2" /><br>
+<img width="338" height="71" alt="image" src="https://github.com/user-attachments/assets/77c4aa1e-5360-457b-86a4-3b6c337df7a5" /><br>
+<img width="338" height="71" alt="image" src="https://github.com/user-attachments/assets/251080a3-ef0b-4a90-bbbe-5ae020f1fd04" /><br>
+
+
+
 **Sequence 00 - empty hallway**<br>
 Average accuracy between Yaw and encoder = 1.0562 rad<br>
 Average drift = 0.0396 m  drift rate = 1.0086 m/m<br> 
-Robustness: standard deviation of velocity = 0.0006<br><br>
+Robustness: standard deviation of velocity = 0.0006 m/s<br><br>
 
 **Sequence 01 – Non-Empty Hallway with Sharp Turns**<br>
 Average accuracy between Yaw and encoder = 1.3038 rad<br>
 Average drift = 0.0421 m drift rate = 0.9881 m/m<br>
-Robustness: standard deviation of velocity = 0.0017<br>
+Robustness: standard deviation of velocity = 0.0017 m/s<br>
 
 **Sequence 02 – Non-Empty Hallway with Non-Aggressive Motion**<br>
 Average accuracy between Yaw and encoder = 1.2087 rad<br>
 Average drift = 0.0432 m drift rate = 0.9556 m/m<br>
-Robustness: standard deviation of velocity = 0.0006<br><br>
+Robustness: standard deviation of velocity = 0.0006 m/s<br><br>
 
 There's conflict between IMU and encoder such as lpped wheel or drifted imu if we look at drifted rate we will see that system has very high drift rate so it's quiet low accuracy.inpart of robustness it's very stable and low variance.<br><br>
 ### EKF odometry<br>
+<img width="319" height="58" alt="image" src="https://github.com/user-attachments/assets/82bc2c4a-0748-4ae7-9b3b-6aa3709702ef" />
+<img width="167" height="48" alt="image" src="https://github.com/user-attachments/assets/10b8c217-b9fe-4d69-8212-65937b2759f2" /><br>
+
 **Sequence 00 - empty hallway**<br>
 Average P trace = 6.8178 <br>
 Average drift error compare with raw odometry = 0.4054 m<br>
@@ -163,6 +173,10 @@ IMU average = 0.0122  Encoder average = 0.0022<br><br>
 
 in sequence 00 there's accumulation of uncertaintly overtime because there's not external position corrections but in sequence 01 and 02 P trace overwhelmly high eventhough  Average dift error and average sensor error still low that mean sensor fusion still maintaining positioning performance compare with standalone odometry<br><br>
 ### ICP odometry<br>
+<img width="247" height="66" alt="image" src="https://github.com/user-attachments/assets/89ce53d9-657e-4752-a034-a08c6a6ff8a6" /><br>
+<img width="399" height="58" alt="image" src="https://github.com/user-attachments/assets/19420268-2f33-441a-89c2-e4ec82f8c28a" /><br>
+
+
 **Sequence 00 - empty hallway**<br>
 Average accuracy MSE of matching scan point = 0.00937<br>Average drift error compare with EKF = 5.277m<br>
 Robustness:Accuracy standard deviation = 0.0236 Max accuracy error = 0.8124<br>
@@ -176,5 +190,15 @@ Robustness:Accuracy standard deviation = 0.00825 Max accuracy error = 0.0979<br>
 MSE of matching scan point approaching to 0. this suggest that ICP algorithm is align to scan data precisely.Robustness is quiet high due to low variance of error except sequence 00 that very high accuracy error. there's very high drif due to there's no correction for position drift <br><br>
 ### Slam toolbox <br>
 **Sequence 00 - empty hallway**<br>
+Average accuracy proxy = 0.00196<br> 
+Average drit error = 0.66593 m<br>
+Average robustness velocity = 0.00094 m/s <br><br>
+
 **Sequence 01 – Non-Empty Hallway with Sharp Turns**<br>
+Average accuracy proxy = 0.00459<br> 
+Average drit error = 0.61246 m<br>
+Average robustness velocity = 0.00204 m/s <br><br>
+
 **Sequence 02 – Non-Empty Hallway with Non-Aggressive Motion**<br>
+
+SLAM from slam toolbox can maintain high accuracy and low average drift. proving its robustness in maintaining spatial consistency.<br>
