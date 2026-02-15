@@ -152,7 +152,7 @@ Robustness: standard deviation of velocity = 0.0006 m/s<br><br>
 
 There's conflict between IMU and encoder such as lpped wheel or drifted imu if we look at drifted rate we will see that system has very high drift rate so it's quiet low accuracy.inpart of robustness it's very stable and low variance.<br><br>
 ### EKF odometry<br>
-<img width="319" height="58" alt="image" src="https://github.com/user-attachments/assets/82bc2c4a-0748-4ae7-9b3b-6aa3709702ef" />
+<img width="319" height="58" alt="image" src="https://github.com/user-attachments/assets/82bc2c4a-0748-4ae7-9b3b-6aa3709702ef" /><br>
 <img width="167" height="48" alt="image" src="https://github.com/user-attachments/assets/10b8c217-b9fe-4d69-8212-65937b2759f2" /><br>
 
 **Sequence 00 - empty hallway**<br>
