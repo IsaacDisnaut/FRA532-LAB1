@@ -11,7 +11,6 @@ from geometry_msgs.msg import PoseStamped, TransformStamped
 from nav_msgs.msg import Path, OccupancyGrid
 from tf2_ros import StaticTransformBroadcaster
 
-# --- ฟังก์ชัน ICP คงเดิม ---
 def icp_2d(X, Y, init_R=None, init_t=None, max_iter=30, tol=1e-5):
     R_total = np.eye(2)
     t_total = np.zeros((2, 1))
@@ -50,42 +49,35 @@ class ICPMapper(Node):
     def __init__(self):
         super().__init__('icp_mapper_node')
         
-        # TF & Buffer
         self.tf_buffer = tf2_ros.Buffer()
         self.tf_listener = tf2_ros.TransformListener(self.tf_buffer, self)
-        
-        # Map & Path Publishers
+    
         map_qos = QoSProfile(depth=1, durability=DurabilityPolicy.TRANSIENT_LOCAL)
         self.map_pub = self.create_publisher(OccupancyGrid, '/map', map_qos)
         self.path_pub = self.create_publisher(Path, '/icp_path', 5)
         
-        # Subscription
+
         self.create_subscription(LaserScan, '/scan', self.scan_cb, qos_profile_sensor_data)
         
-        # State Variables
         self.prev_points = None
         self.prev_ekf_pose = None 
         self.current_global_R = np.eye(2)
         self.current_global_t = np.zeros((2, 1))
         self.current_yaw = 0.0
         
-        # Map Config
         self.res = 0.05
         self.map_width = 800
         self.map_height = 800
         self.origin_x = -20.0
         self.origin_y = -20.0
         self.grid = np.full((self.map_height, self.map_width), -1, dtype=np.int8)
-        
-        # Path Init
+
         self.path_msg = Path()
         self.path_msg.header.frame_id = 'map'
-        
-        # TF Static
+
         self.static_tf_broadcaster = StaticTransformBroadcaster(self)
         self.send_static_tf()
 
-        # Update Thresholds (เพื่อไม่ให้แมพทำงานหนักเกินไป)
         self.last_map_t = self.current_global_t.copy()
         self.last_map_yaw = 0.0
 
@@ -127,14 +119,13 @@ class ICPMapper(Node):
                 cells = self.bresenham(rx, ry, mx, my)
                 for cx, cy in cells[:-1]:
                     if 0 <= cx < self.map_width and 0 <= cy < self.map_height:
-                        if self.grid[cy, cx] == -1: # เฉพาะพื้นที่ไม่รู้จัก
+                        if self.grid[cy, cx] == -1: 
                             self.grid[cy, cx] = 0
-                
-                # Mark obstacle
+ 
                 self.grid[my, mx] = 100
 
     def scan_cb(self, msg: LaserScan):
-        # 1. Convert Scan to Points
+
         angles = msg.angle_min + np.arange(len(msg.ranges)) * msg.angle_increment
         ranges = np.array(msg.ranges)
         valid = np.isfinite(ranges) & (ranges > msg.range_min) & (ranges < msg.range_max)
@@ -148,10 +139,9 @@ class ICPMapper(Node):
             return
         if self.prev_ekf_pose is None or curr_ekf is None:
             self.get_logger().info('Waiting for first EKF pose...')
-            self.prev_ekf_pose = curr_ekf  # เก็บค่าแรกไว้เป็นฐาน
-            return  # จบการทำงาน callback นี้ไปก่อน รอข้อมูลรอบหน้า
+            self.prev_ekf_pose = curr_ekf  
+            return  
 
-        # 2. Initial Guess from EKF
         dx, dy = curr_ekf[0] - self.prev_ekf_pose[0], curr_ekf[1] - self.prev_ekf_pose[1]
         dyaw = math.atan2(math.sin(curr_ekf[2]-self.prev_ekf_pose[2]), math.cos(curr_ekf[2]-self.prev_ekf_pose[2]))
         
@@ -159,15 +149,14 @@ class ICPMapper(Node):
         init_t = np.array([[dx*c + dy*s], [-dx*s + dy*c]])
         init_R = np.array([[np.cos(dyaw), -np.sin(dyaw)], [np.sin(dyaw), np.cos(dyaw)]])
 
-        # 3. ICP Matching
         R_delta, t_delta, _, _ = icp_2d(self.prev_points, curr_pts, init_R, init_t)
 
-        # 4. Update Global State
+
         self.current_global_t += self.current_global_R @ t_delta
         self.current_global_R = self.current_global_R @ R_delta
         self.current_yaw = math.atan2(self.current_global_R[1,0], self.current_global_R[0,0])
 
-        # 5. Map Update (เมื่อมีการเคลื่อนที่)
+
         dist_moved = np.linalg.norm(self.current_global_t - self.last_map_t)
         angle_moved = abs(self.current_yaw - self.last_map_yaw)
 
@@ -178,7 +167,6 @@ class ICPMapper(Node):
             self.last_map_yaw = self.current_yaw
             self.publish_map()
 
-        # 6. Publish Path & State
         self.publish_path()
         self.prev_points, self.prev_ekf_pose = curr_pts, curr_ekf
 
