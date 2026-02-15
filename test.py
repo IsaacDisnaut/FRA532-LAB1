@@ -109,16 +109,6 @@ class SensorReader(Node):
         self.path.header.stamp = now.to_msg()
 
         self.path_pub.publish(self.path)
-        # for name, pos, vel in zip(
-        #     msg.name,
-        #     msg.position,
-        #     msg.velocity
-        # ):
-            # print(
-            #     f"Joint | {name}: "
-            #     f"pos={pos:.3f}, vel={vel:.3f}"
-            # )
-
 
 def main():
     rclpy.init()
