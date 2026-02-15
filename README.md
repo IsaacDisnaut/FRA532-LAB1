@@ -117,8 +117,14 @@ ros2 launch lab1 slam.launch.py seq:=[number of sequence]
 <img width="1661" height="733" alt="image" src="https://github.com/user-attachments/assets/9cd0c4ac-6b36-45e9-bb0e-8a31da20c49d" /><br><br>
 
 ### Sequence 00 - empty hallway<br>
+<img width="1854" height="955" alt="image" src="https://github.com/user-attachments/assets/7d9f5661-dbb9-457e-8553-66a79cbb40fe" /><br>
+
 ### Sequence 01 – Non-Empty Hallway with Sharp Turns<br>
+<img width="1854" height="955" alt="image" src="https://github.com/user-attachments/assets/36d59a25-5e0f-411e-b9c4-7bde7486283f" /><br>
+
 ### Sequence 02 – Non-Empty Hallway with Non-Aggressive Motion<br>
+<img width="1973" height="979" alt="image" src="https://github.com/user-attachments/assets/abd279ba-3feb-4111-a8d8-ed6014da267d" /><br>
+
 
 ## Discussion
 ### Wheel Odometry<br>
