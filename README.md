@@ -25,7 +25,7 @@ In this part, you will run slam_toolbox using LiDAR data and an odometry source 
 ## Robot Dimension
 
 <img width="664" height="521" alt="turtlebot3_dimension1" src="https://github.com/user-attachments/assets/2a7e20e4-35c5-40b1-a373-b6a74af9f3b8" /><br>
-## Wheel Odometry<br>
+## [Wheel Odometry](https://github.com/IsaacDisnaut/FRA532-LAB1/blob/main/test.py)<br>
 <img width="575" height="301" alt="Pasted image" src="https://github.com/user-attachments/assets/010f78ce-dd9e-4e90-8476-c6645b207dbc" /><br>
 <img width="242" height="131" alt="Pasted image (2)" src="https://github.com/user-attachments/assets/16fa28bd-029a-436d-aa87-54090e6dc90b" /><br>
 cr. [Wheeled Mobile Robot Kinematics](https://control.ros.org/iron/doc/ros2_controllers/doc/mobile_robot_kinematics.html)<br><br>
@@ -39,7 +39,7 @@ cr. [Wheeled Mobile Robot Kinematics](https://control.ros.org/iron/doc/ros2_cont
 <img width="1121" height="847" alt="Raw01" src="https://github.com/user-attachments/assets/b5041397-a090-407a-8552-ef88b3110e6a" /> <br>
 ### Sequence 02 – Non-Empty Hallway with Non-Aggressive Motion <br>
 <img width="1121" height="847" alt="RAW03" src="https://github.com/user-attachments/assets/a9a86853-0db4-45e2-9363-6d3dfaac9570" /> <br>
-## EKF Odometry <br>
+## [EKF Odometry](https://github.com/IsaacDisnaut/FRA532-LAB1/blob/main/my_py_pkg/testEKF.py) <br>
 <img width="811" height="445" alt="figure-extended-kalman-filter-algorithm" src="https://github.com/user-attachments/assets/0ce2ce0e-2950-4d91-be41-92a0cd2c110b" /><br>
 cr. [Wireless Pi](https://wirelesspi.com/the-extended-kalman-filter-ekf/)<br><br>
 <img width="352" height="55" alt="Covariance" src="https://github.com/user-attachments/assets/85f2b643-d0da-47f7-bcbf-5a773678472b" /><br>
@@ -62,7 +62,7 @@ cr. [Wireless Pi](https://wirelesspi.com/the-extended-kalman-filter-ekf/)<br><br
 <img width="1218" height="896" alt="EK" src="https://github.com/user-attachments/assets/e22765bb-f51b-407f-b1a8-11537ffe1e98" /><br>
 ### Sequence 02 – Non-Empty Hallway with Non-Aggressive Motion<br>
 <img width="1218" height="896" alt="EKF02" src="https://github.com/user-attachments/assets/f456a3bb-397a-48df-8bee-37fe1988c97a" /><br><br>
-## ICP Odometry<br>
+## [ICP Odometry](https://github.com/IsaacDisnaut/FRA532-LAB1/blob/main/my_py_pkg/scanICP.py)<br>
 
 **Initial guess**<br>
 <img width="157" height="55" alt="Initial_guess_icp" src="https://github.com/user-attachments/assets/457a7f69-ca15-4c80-8362-8e7c7ff594da" /><br>
@@ -109,8 +109,8 @@ break the loop when k>=max iteration or error < tol <br>
 ** Sequence 02 **<br>
 <img width="1140" height="826" alt="ICP_MAP03" src="https://github.com/user-attachments/assets/1aeeec67-548b-4daf-b830-69798441faa0" /><br>
 
-## Slam toolbox Odometry<br>
-[SLAM_toolbox source code](https://github.com/phattanaratjeedjeen-sudo/FRA532-LAB-6810/tree/lab1/src/lab1)<br>
+## [Slam toolbox Odometry](https://github.com/phattanaratjeedjeen-sudo/FRA532-LAB-6810/tree/lab1/src/lab1)<br>
+
 ```
 ros2 launch lab1 slam.launch.py seq:=[number of sequence]
 ```
