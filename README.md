@@ -114,6 +114,7 @@ break the loop when k>=max iteration or error < tol <br>
 ```
 ros2 launch lab1 slam.launch.py seq:=[number of sequence]
 ```
+<img width="1661" height="733" alt="image" src="https://github.com/user-attachments/assets/9cd0c4ac-6b36-45e9-bb0e-8a31da20c49d" /><br><br>
 
 ### Sequence 00 - empty hallway<br>
 ### Sequence 01 – Non-Empty Hallway with Sharp Turns<br>
