@@ -16,7 +16,6 @@ class SensorReader(Node):
     def __init__(self):
         super().__init__('ekf_sensor_fusion')
 
-        # ---------------- ROS PARAM ----------------
         self.set_parameters([
             rclpy.parameter.Parameter(
                 'use_sim_time',
@@ -28,7 +27,7 @@ class SensorReader(Node):
         self.log_file = 'ekf_fusion_results.csv'
         self.total_dist = 0.0
         self.last_pos = None
-        # ---------------- PUBLISHERS ----------------
+
         self.path_pub = self.create_publisher(Path, '/trajectory', 10)
         self.path = Path()
         self.path.header.frame_id = 'odom'
@@ -41,7 +40,7 @@ class SensorReader(Node):
         # ตัวแปรเก็บค่าล่าสุดเพื่อทำ Metrics
         self.latest_imu_innovation = 0.0
         self.latest_enc_innovation = 0.0
-        # ---------------- SUBSCRIBERS ----------------
+
         self.create_subscription(
             Imu,
             '/imu',
@@ -56,15 +55,13 @@ class SensorReader(Node):
             10
         )
 
-        # ---------------- ROBOT PARAMETERS ----------------
         self.r = 0.033   # wheel radius [m]
         self.L = 0.16    # wheel base [m]
 
         # State: x = [x, y, yaw, v, w]^T
-        # ---------- STATE ----------
+
         self.x = np.zeros((5, 1))
 
-        # ---------- COVARIANCE ----------
         # High uncertainty on velocity states at start
         self.P = np.diag([
             0.1,  # x
@@ -74,7 +71,6 @@ class SensorReader(Node):
             1.0    # w
         ])
 
-        # ---------- PROCESS NOISE ----------
         # Motion uncertainty mainly comes from v and w
         self.Q = np.diag([
             0.9,  # x
@@ -84,25 +80,18 @@ class SensorReader(Node):
             0.9    # w
         ])
 
-        # ---------- MEASUREMENT NOISE ----------
         # IMU orientation (yaw)
         self.R = np.array([[0.05]])
 
-        # ---------------- TIME & FLAGS ----------------
         self.last_time = self.get_clock().now()
 
-        # For async callbacks
         self.initialized = False
 
-        # Measurement buffers
         self.yaw_meas = None
         self.w_meas = None
 
         self.get_logger().info('EKF sensor fusion node initialized')
 
-
-    # ---------------- IMU UPDATE ----------------
-   # ---------------- IMU UPDATE (yaw) ----------------
     def imu_cb(self, msg):
         q = msg.orientation
         _, _, yaw_meas = euler_from_quaternion([q.x, q.y, q.z, q.w])
@@ -136,9 +125,6 @@ class SensorReader(Node):
         self.P = (np.eye(5) - K @ H) @ self.P
 
     
-
-
-    # ---------------- ODOM PREDICTION ----------------
     def joint_cb(self, msg):
         wL, wR = msg.velocity[0], msg.velocity[1]
         now = self.get_clock().now()
@@ -150,8 +136,6 @@ class SensorReader(Node):
         dt = (now - self.last_time).nanoseconds * 1e-9
         self.last_time = now
 
-        # 1. Prediction Step
-        # ... [ส่วนทำนาย State x และ P เหมือนเดิม] ...
         yaw = self.x[2,0]
         v = self.x[3,0]
         w = self.x[4,0]
@@ -168,7 +152,6 @@ class SensorReader(Node):
         F[2, 4] = dt
         self.P = F @ self.P @ F.T + self.Q
 
-        # 2. Measurement Update (Encoder)
         vL, vR = self.r * wL, self.r * wR
         v_meas = 0.5 * (vR + vL)
         w_meas = (vR - vL) / self.L
@@ -186,25 +169,18 @@ class SensorReader(Node):
         self.P = (np.eye(5) - K @ H) @ self.P
         self.x[2,0] = math.atan2(math.sin(self.x[2,0]), math.cos(self.x[2,0]))
 
-        # ---- [เพิ่มส่วนการคำนวณ Metrics] ----
-        
-        # A. Raw Odometry (สำหรับคำนวณ Drift)
         self.raw_odom_x += v_meas * math.cos(self.raw_odom_yaw) * dt
         self.raw_odom_y += v_meas * math.sin(self.raw_odom_yaw) * dt
         self.raw_odom_yaw += w_meas * dt
         
-        # B. คำนวณ Drift (ระยะห่างระหว่าง EKF กับ Raw Odom)
         drift = math.sqrt((self.x[0,0] - self.raw_odom_x)**2 + (self.x[1,0] - self.raw_odom_y)**2)
         
-        # C. คำนวณ Accuracy (ใช้ค่าความมั่นใจจาก Matrix P)
         accuracy_trace = np.trace(self.P)
 
-        # D. ระยะทางสะสม
         if self.last_pos is not None:
             self.total_dist += math.sqrt((self.x[0,0]-self.last_pos[0])**2 + (self.x[1,0]-self.last_pos[1])**2)
         self.last_pos = (self.x[0,0], self.x[1,0])
 
-        # บันทึกข้อมูล
         self.metrics_list.append({
             'timestamp': now.nanoseconds * 1e-9,
             'accuracy_P_trace': accuracy_trace,   # ยิ่งน้อย ยิ่งแม่น (Accuracy)
@@ -221,8 +197,6 @@ class SensorReader(Node):
 )
 
         self.publish_tf_and_path(now)
-
-    # ---------------- TF + PATH ----------------
     def publish_tf_and_path(self, now):
         t = TransformStamped()
         t.header.stamp = now.to_msg()
