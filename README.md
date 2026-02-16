@@ -52,8 +52,8 @@ cr. [Wireless Pi](https://wirelesspi.com/the-extended-kalman-filter-ekf/)<br><br
 <img width="104" height="58" alt="imu_ekf2" src="https://github.com/user-attachments/assets/81ba0fcb-620d-4ff4-bb4c-d0f3ccf46a8d" /><br>
 <img width="193" height="49" alt="inu_ekf3" src="https://github.com/user-attachments/assets/de9cc832-611e-47d9-a5ee-3471dbf48994" /><br><br>
 **Encoder model**<br>
-<img width="113" height="40" alt="encoder_ekf" src="https://github.com/user-attachments/assets/3e543ccb-79af-4458-a81f-b18c0419a414" /><br>
-<img width="213" height="47" alt="encoder_ekf2" src="https://github.com/user-attachments/assets/37bc2ffd-8a19-4582-b692-4c689864b7db" /><br><br>
+<img width="130" height="59" alt="image" src="https://github.com/user-attachments/assets/b6480672-d587-4976-bcbf-41b2c9489b8d" /><br>
+<img width="214" height="66" alt="image" src="https://github.com/user-attachments/assets/3f7f1262-5de5-4b27-8cc9-2f8dc9e9a957" /><br><br>
 **Prediction model**<br>
 <img width="177" height="96" alt="Prediction_step" src="https://github.com/user-attachments/assets/8a01aef5-4913-4b6f-bbcd-7700fd81aa06" /><br>
 <img width="1265" height="352" alt="image" src="https://github.com/user-attachments/assets/68080279-6089-480a-b332-fa9a5b6e8377" /><br><br>
