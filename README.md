@@ -162,12 +162,12 @@ Average drift error compare with raw odometry = 0.4054 m<br>
 Robustness Compare between predict and measurement<br>
 IMU average = 0.0099  Encoder average = 0.0019<br>
 **Sequence 01 – Non-Empty Hallway with Sharp Turns**<br>
-Average P trace = 2.84*10<sup>17</sup><br>
+Average P trace = 2.84x10<sup>17</sup><br>
 Average drift error compare with raw odometry = 0.4732 m<br>
 Robustness Compare between predict and measurement<br>
 IMU average = 0.0257  Encoder average = 0.0037<br>
 **Sequence 02 – Non-Empty Hallway with Non-Aggressive Motion**<br>
-Average P trace = 2.846*10<sup>17</sup><br>
+Average P trace = 2.846x10<sup>17</sup><br>
 Average drift error compare with raw odometry = 0.4384 m<br>
 Robustness Compare between predict and measurement<br>
 IMU average = 0.0122  Encoder average = 0.0022<br><br>
