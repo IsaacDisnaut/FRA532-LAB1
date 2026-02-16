@@ -26,6 +26,9 @@ In this part, you will run slam_toolbox using LiDAR data and an odometry source 
 
 <img width="664" height="521" alt="turtlebot3_dimension1" src="https://github.com/user-attachments/assets/2a7e20e4-35c5-40b1-a373-b6a74af9f3b8" /><br>
 ## [Wheel Odometry](https://github.com/IsaacDisnaut/FRA532-LAB1/blob/main/test.py)<br>
+```
+ros2 run my_py_okg test.py 
+```
 <img width="575" height="301" alt="Pasted image" src="https://github.com/user-attachments/assets/010f78ce-dd9e-4e90-8476-c6645b207dbc" /><br>
 <img width="191" height="103" alt="image" src="https://github.com/user-attachments/assets/e573f0e3-8a2f-482a-899d-9de26773bb9e" />
 <br>
@@ -41,6 +44,9 @@ cr. [Wheeled Mobile Robot Kinematics](https://control.ros.org/iron/doc/ros2_cont
 ### Sequence 02 – Non-Empty Hallway with Non-Aggressive Motion <br>
 <img width="1121" height="847" alt="RAW03" src="https://github.com/user-attachments/assets/a9a86853-0db4-45e2-9363-6d3dfaac9570" /> <br>
 ## [EKF Odometry](https://github.com/IsaacDisnaut/FRA532-LAB1/blob/main/my_py_pkg/testEKF.py) <br>
+```
+ros2 run my_py_okg test_ekf.py seq:=[number of sequence]
+```
 <img width="811" height="445" alt="figure-extended-kalman-filter-algorithm" src="https://github.com/user-attachments/assets/0ce2ce0e-2950-4d91-be41-92a0cd2c110b" /><br>
 cr. [Wireless Pi](https://wirelesspi.com/the-extended-kalman-filter-ekf/)<br><br>
 <img width="102" height="135" alt="imu_ekf" src="https://github.com/user-attachments/assets/9756af09-f096-4cd0-8e0b-a7954d361ca2" /><br>
@@ -65,7 +71,9 @@ cr. [Wireless Pi](https://wirelesspi.com/the-extended-kalman-filter-ekf/)<br><br
 ### Sequence 02 – Non-Empty Hallway with Non-Aggressive Motion<br>
 <img width="1218" height="896" alt="EKF02" src="https://github.com/user-attachments/assets/f456a3bb-397a-48df-8bee-37fe1988c97a" /><br><br>
 ## [ICP Odometry](https://github.com/IsaacDisnaut/FRA532-LAB1/blob/main/my_py_pkg/scanICP.py)<br>
-
+```
+ros2 launch my_py_pkg ekf_icp.launch.py
+```
 **Initial guess**<br>
 <img width="157" height="55" alt="Initial_guess_icp" src="https://github.com/user-attachments/assets/457a7f69-ca15-4c80-8362-8e7c7ff594da" /><br>
 X<sup>(0)</sup> = Initial position<br>
