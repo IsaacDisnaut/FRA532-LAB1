@@ -26,6 +26,7 @@ setup(
     },
     entry_points={
         'console_scripts': [
+            'test.py = my_py_pkg.test:main',
             'test_ekf = my_py_pkg.testEKF:main',
             'scan_icp = my_py_pkg.scanICP:main',
         ],
