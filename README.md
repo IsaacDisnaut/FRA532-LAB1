@@ -27,7 +27,8 @@ In this part, you will run slam_toolbox using LiDAR data and an odometry source 
 <img width="664" height="521" alt="turtlebot3_dimension1" src="https://github.com/user-attachments/assets/2a7e20e4-35c5-40b1-a373-b6a74af9f3b8" /><br>
 ## [Wheel Odometry](https://github.com/IsaacDisnaut/FRA532-LAB1/blob/main/test.py)<br>
 <img width="575" height="301" alt="Pasted image" src="https://github.com/user-attachments/assets/010f78ce-dd9e-4e90-8476-c6645b207dbc" /><br>
-<img width="207" height="61" alt="image" src="https://github.com/user-attachments/assets/47661541-68c2-4873-b099-3d9fc77f80e7" />
+<img width="191" height="103" alt="image" src="https://github.com/user-attachments/assets/e573f0e3-8a2f-482a-899d-9de26773bb9e" />
+
 <br>
 cr. [Wheeled Mobile Robot Kinematics](https://control.ros.org/iron/doc/ros2_controllers/doc/mobile_robot_kinematics.html)<br><br>
 **x += V<sub>b,x</sub>cos(θ)Δt**<br>
