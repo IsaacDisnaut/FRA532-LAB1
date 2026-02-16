@@ -43,10 +43,11 @@ cr. [Wheeled Mobile Robot Kinematics](https://control.ros.org/iron/doc/ros2_cont
 ## [EKF Odometry](https://github.com/IsaacDisnaut/FRA532-LAB1/blob/main/my_py_pkg/testEKF.py) <br>
 <img width="811" height="445" alt="figure-extended-kalman-filter-algorithm" src="https://github.com/user-attachments/assets/0ce2ce0e-2950-4d91-be41-92a0cd2c110b" /><br>
 cr. [Wireless Pi](https://wirelesspi.com/the-extended-kalman-filter-ekf/)<br><br>
+<img width="102" height="135" alt="imu_ekf" src="https://github.com/user-attachments/assets/9756af09-f096-4cd0-8e0b-a7954d361ca2" /><br>
 <img width="352" height="55" alt="Covariance" src="https://github.com/user-attachments/assets/85f2b643-d0da-47f7-bcbf-5a773678472b" /><br>
 <img width="367" height="49" alt="noise" src="https://github.com/user-attachments/assets/679026be-a2f3-48a2-b861-6794fcaf51d0" /><br>
 <img width="336" height="141" alt="Jacobian_model" src="https://github.com/user-attachments/assets/a1cd3244-28d3-4527-bb2e-26482865f533" /><br>
-<img width="102" height="135" alt="imu_ekf" src="https://github.com/user-attachments/assets/9756af09-f096-4cd0-8e0b-a7954d361ca2" /><br><br>
+<br>
 **IMU model**<br>
 <img width="104" height="58" alt="imu_ekf2" src="https://github.com/user-attachments/assets/81ba0fcb-620d-4ff4-bb4c-d0f3ccf46a8d" /><br>
 <img width="193" height="49" alt="inu_ekf3" src="https://github.com/user-attachments/assets/de9cc832-611e-47d9-a5ee-3471dbf48994" /><br><br>
