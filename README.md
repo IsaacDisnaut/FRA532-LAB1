@@ -97,7 +97,7 @@ in python we can use U, _, V = np.linalg.svd(H) to define U and V<br>
 <img width="108" height="47" alt="image" src="https://github.com/user-attachments/assets/dbc9d43b-034c-41c3-b5e0-e2cc593ad781" /><br>
 **Point Update**<br>
 <img width="177" height="40" alt="image" src="https://github.com/user-attachments/assets/119d3997-801a-447c-9121-6064685939b7" /><br>
-**Accumulate trnsform**<br>
+**Accumulate transform**<br>
 <img width="179" height="67" alt="image" src="https://github.com/user-attachments/assets/2e672ed2-accb-48cc-b15a-29620e0ca103" /><br>
 **Error between corresponse point**<br>
 <img width="316" height="76" alt="image" src="https://github.com/user-attachments/assets/19392e51-304b-4035-91ee-625b7495380c" /><br>
