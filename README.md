@@ -191,30 +191,27 @@ in sequence 00 there's accumulation of uncertaintly overtime because there's not
 <br>
 
 **Sequence 00 - empty hallway**<br>
-Average accuracy MSE of matching scan point = 0.00937<br>Average drift error compare with EKF = 5.277m<br>
-Robustness:Accuracy standard deviation = 0.0236 Max accuracy error = 0.8124<br>
+Average accuracy proxy= 0.002902<br>Average drift= 0.315404<br>
+Robustness = 0.031616<br>Total distance=19.621593 m<br><br>
 **Sequence 01 – Non-Empty Hallway with Sharp Turns**<br>
-Average accuracy MSE of matching scan point = 0.00539<br>Average drift error compare with EKF = 9.195m<br>
-Robustness:Accuracy standard deviation = 0.00945 Max accuracy error = 0.1399<br>
+Average accuracy proxy= 0.001506<br>Average drift= 0.537709<br>
+Robustness = 0.025764<br>Total distance=21.610760 m<br><br>
 **Sequence 02 – Non-Empty Hallway with Non-Aggressive Motion**<br>
-Average accuracy MSE of matching scan point = 0.00513<br>Average drift error compare with EKF = 7.741m<br>
-Robustness:Accuracy standard deviation = 0.00825 Max accuracy error = 0.0979<br><br>
+Average accuracy proxy= 0.000656<br>Average drift= 0.448538<br>
+Robustness = 0.019159<br>Total distance=21.662829 m<br><br>
 
-MSE of matching scan point approaching to 0. this suggest that ICP algorithm is align to scan data precisely.Robustness is quiet high due to low variance of error except sequence 00 that very high accuracy error. there's very high drif due to there's no correction for position drift <br><br>
+MSE of matching scan point approaching to 0. this suggest that ICP algorithm is align to scan data precisely.Robustness is quiet stable and drift ratio in range of 31% to 53% which moderate high  <br><br>
 ### Slam toolbox <br>
 **Sequence 00 - empty hallway**<br>
-Average accuracy proxy = 0.00196<br> 
-Average drift error = 0.66593 m<br>
-Average robustness velocity = 0.00094 m/s <br><br>
+Average accuracy proxy= 0.000125<br>Average drift= 0.576520<br>
+Robustness = 0.003263<br>Total distance=30.845117 mm<br><br>
 
 **Sequence 01 – Non-Empty Hallway with Sharp Turns**<br>
-Average accuracy proxy = 0.00459<br> 
-Average drift error = 0.61246 m<br>
-Average robustness velocity = 0.00204 m/s <br><br>
+Average accuracy proxy= 0.000409<br>Average drift= 0.563834<br>
+Robustness = 0.008004<br>Total distance= 29.960281 m<br><br>
 
 **Sequence 02 – Non-Empty Hallway with Non-Aggressive Motion**<br>
-Average accuracy proxy = 0.00194<br> 
-Average drift error = 0.58236 m<br>
-Average robustness velocity = 0.00083 m/s <br><br>
+Average accuracy proxy= 0.000105<br>Average drift= 0.412796<br>
+Robustness = 0.003251<br>Total distance=38.558156 m<br><br>
 
-SLAM from slam toolbox can maintain high accuracy and low average drift. proving its robustness in maintaining spatial consistency.<br>
+SLAM from slam toolbox can maintain high accuracy and moderate drift due to using wheel odometry. proving its robustness in maintaining spatial consistency.<br>
