@@ -183,9 +183,12 @@ IMU average = 0.0122  Encoder average = 0.0022<br><br>
 
 in sequence 00 there's accumulation of uncertaintly overtime because there's not external position corrections but in sequence 01 and 02 P trace overwhelmly high eventhough  Average dift error and average sensor error still low that mean sensor fusion still maintaining positioning performance compare with standalone odometry<br><br>
 ### ICP odometry<br>
-<img width="247" height="66" alt="image" src="https://github.com/user-attachments/assets/89ce53d9-657e-4752-a034-a08c6a6ff8a6" /><br>
-<img width="399" height="58" alt="image" src="https://github.com/user-attachments/assets/19420268-2f33-441a-89c2-e4ec82f8c28a" /><br>
-
+<img width="421" height="70" alt="image" src="https://github.com/user-attachments/assets/06e9abc9-b02e-4294-8041-6bf5745f4459" />
+<br>
+<img width="421" height="70" alt="image" src="https://github.com/user-attachments/assets/9282cb85-2df0-4e24-9d10-fa9d7166112a" />
+<br>
+<img width="462" height="75" alt="image" src="https://github.com/user-attachments/assets/ab58c481-76ea-4c06-949c-5f7aea232053" />
+<br>
 
 **Sequence 00 - empty hallway**<br>
 Average accuracy MSE of matching scan point = 0.00937<br>Average drift error compare with EKF = 5.277m<br>
