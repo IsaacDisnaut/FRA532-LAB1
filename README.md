@@ -201,17 +201,17 @@ MSE of matching scan point approaching to 0. this suggest that ICP algorithm is 
 ### Slam toolbox <br>
 **Sequence 00 - empty hallway**<br>
 Average accuracy proxy = 0.00196<br> 
-Average drit error = 0.66593 m<br>
+Average drift error = 0.66593 m<br>
 Average robustness velocity = 0.00094 m/s <br><br>
 
 **Sequence 01 – Non-Empty Hallway with Sharp Turns**<br>
 Average accuracy proxy = 0.00459<br> 
-Average drit error = 0.61246 m<br>
+Average drift error = 0.61246 m<br>
 Average robustness velocity = 0.00204 m/s <br><br>
 
 **Sequence 02 – Non-Empty Hallway with Non-Aggressive Motion**<br>
 Average accuracy proxy = 0.00194<br> 
-Average drit error = 0.58236 m<br>
+Average drift error = 0.58236 m<br>
 Average robustness velocity = 0.00083 m/s <br><br>
 
 SLAM from slam toolbox can maintain high accuracy and low average drift. proving its robustness in maintaining spatial consistency.<br>
