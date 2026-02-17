@@ -161,7 +161,7 @@ class SensorReader(Node):
         R_enc = np.diag([0.1, 0.1])
 
         y = z - H @ self.x
-        self.latest_enc_innovation = float(np.linalg.norm(y)) # Robustness metric
+        self.latest_enc_innovation = float(np.linalg.norm(y)) 
 
         S = H @ self.P @ H.T + R_enc
         K = self.P @ H.T @ np.linalg.inv(S)
@@ -183,10 +183,10 @@ class SensorReader(Node):
 
         self.metrics_list.append({
             'timestamp': now.nanoseconds * 1e-9,
-            'accuracy_P_trace': accuracy_trace,   # ยิ่งน้อย ยิ่งแม่น (Accuracy)
-            'drift_error': drift,                 # ระยะเพี้ยนจาก Odom เปล่า (Drift)
-            'imu_innovation': self.latest_imu_innovation, # ความเสถียร (Robustness)
-            'enc_innovation': self.latest_enc_innovation, # ความเสถียร (Robustness)
+            'accuracy_P_trace': accuracy_trace,   
+            'drift_error': drift,               
+            'imu_innovation': self.latest_imu_innovation, 
+            'enc_innovation': self.latest_enc_innovation, 
             'dist_travelled': self.total_dist
         })
 
