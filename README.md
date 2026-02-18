@@ -111,7 +111,7 @@ break the loop when k>=max iteration or error < tol <br>
 ### Sequence 02 – Non-Empty Hallway with Non-Aggressive Motion<br>
 <img width="1218" height="896" alt="ICP03" src="https://github.com/user-attachments/assets/364e2ef5-8e1e-4a2f-8f8d-b0d47a0a3fc3" /><br>
 ### Map from ICP<br>
-** Sequence 00 **<br>
+** Sequence 00 ** <br>
 <img width="1140" height="826" alt="ICPmap00" src="https://github.com/user-attachments/assets/2b5c43a4-598f-42ab-abae-71793089cb9a" /><br>
 ** Sequence 01 **<br>
 <img width="1140" height="826" alt="ICP_MAP01" src="https://github.com/user-attachments/assets/6905816c-0550-468e-8bfe-dbbff0b10f61" /><br>
